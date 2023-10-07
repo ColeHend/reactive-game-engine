@@ -14,12 +14,4 @@ function useSceneManager(props:Props) {
 
 export default useSceneManager
 
-export class SceneManager {
-    constructor() {}
-    public draw(context:CanvasRenderingContext2D){
-        
-    }
-    public update(frame:number){
 
-    }
-}
