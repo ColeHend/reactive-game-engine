@@ -1,5 +1,6 @@
 import { MapData } from '../../../models/maps';
 import { ResourceLoader } from './ResourceLoader';
+import { Resources } from './Resources';
 export class SceneManager {
     private mapData: MapData[];
     private resources: ResourceLoader;
@@ -19,7 +20,7 @@ export class SceneManager {
              } 
             
          }
-         
+
          if (spritesheets) {
              for (let i = 0; i < spritesheets.length; i++) {
                 const ele = spritesheets[i];
@@ -51,33 +52,3 @@ export class SceneManager {
     }
 }
 
-interface Resources {
-    sprites:{
-        rows:number,
-        columns:number,
-        facing:{
-            up:number,
-            down:number,
-            right:number,
-            left:number
-        }
-        images: {name:string,path:string}[]
-    },
-    spritesheets:{
-        name:string,
-        path:string,
-        rows:number,
-        columns:number
-    }[],
-    tilesets: {
-        name:string,
-        path:string,
-        rows:number,
-        columns:number
-    }[],
-    pictures: {
-        name: string,
-        path: string
-    }[]
-
-}

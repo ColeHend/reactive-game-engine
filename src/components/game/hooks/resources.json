@@ -1,0 +1,64 @@
+{
+    "sprites": {
+        "rows": 4,
+        "columns": 4,
+        "facing": {
+            "up": 3,
+            "down": 0,
+            "right": 2,
+            "left": 1
+        },
+        "images": [
+            {
+                "name": "charizard",
+                "path": "/src/graphics/sprites/charizard.png"
+            },
+            {
+                "name": "ghost",
+                "path": "/src/graphics/sprites/ghost.png"
+            },
+            {
+                "name": "greenMan",
+                "path": "/src/graphics/sprites/greenMan.png"
+            },
+            {
+                "name": "player",
+                "path": "/src/graphics/sprites/player.png"
+            },
+            {
+                "name": "shadowGuy",
+                "path": "/src/graphics/sprites/shadowGuy.png"
+            },
+            {
+                "name": "fireball",
+                "path": "/src/graphics/sprites/fireball.png"
+            },
+            {
+                "name": "goblin",
+                "path": "/src/graphics/sprites/goblin.png"
+            }
+        ]
+    },
+    "spritesheets": [],
+    "tilesets": [
+        {
+            "name": "CastleTown",
+            "path": "/src/graphics/tilesets/CastleTown.png",
+            "rows": 23,
+            "columns": 8
+        },
+        {
+            "name": "CastleTownExterior",
+            "path": "/src/graphics/tilesets/CastleTownExterior.png",
+            "rows": 23,
+            "columns": 8
+        },
+        {
+            "name": "MountainTileset",
+            "path": "/src/graphics/tilesets/mountainTileset.png",
+            "rows": 23,
+            "columns": 8
+        }
+    ],
+    "pictures": []
+}
