@@ -1,15 +1,15 @@
 import React from 'react'
+import { SceneManager } from '../classes/SceneManager';
+import { MapData } from '../../../models/maps';
 
 interface Props {
-    name: string;
+    mapData: MapData[];
 }
 
 function useSceneManager(props:Props) {
 
 
-    return (
-        <div>useSceneManager {props.name}</div>
-    )
+    return (new SceneManager(props.mapData))
 }
 
 export default useSceneManager

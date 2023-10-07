@@ -3,7 +3,6 @@ export interface EventCore {
     x:number;
     y:number;
     img:string;
-    mapName:string;
 }
 
 export interface EventExtended extends EventCore {
