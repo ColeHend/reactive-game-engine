@@ -23,6 +23,7 @@ export function MapLoader(mapData: MapData[], resources:ResourceLoader) {
         const map = new Map(tname, layer, events, layout, resources);
         maps.push(map);
     }
+    return maps
 }
 
 function EventLoader(event: eventData, resources: ResourceLoader): events {

@@ -4,6 +4,5 @@ export interface MapData {
     tilesetName: string;
     layers: number;
     events: EventCore[];
-    data: number[][][]
-    
+    data: number[][][];
 }

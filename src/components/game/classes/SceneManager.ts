@@ -1,12 +1,17 @@
 import { MapData } from '../../../models/maps';
 import { ResourceLoader } from './ResourceLoader';
 import { Resources } from './Resources';
+import { Map } from './Map';
+import { MapLoader } from './MapLoader';
 export class SceneManager {
     private mapData: MapData[];
     private resources: ResourceLoader;
+    public maps: Map[];
+    public currentMapIndex: number = 0;
     constructor(mapData: MapData[], resources?:Resources) {
         this.mapData = mapData;
         this.resources = this.startResouces(resources);
+        this.maps = MapLoader(this.mapData,this.resources)
     }
     private startResouces(resources?:Resources){
         const manager = new ResourceLoader();
@@ -46,9 +51,15 @@ export class SceneManager {
     }
 
     public draw(context: CanvasRenderingContext2D) {
+        if (this.maps.length > 0) {
+            this.maps[this.currentMapIndex].draw(context)
+        }
     }
 
     public update(frame: number) {
+        if (this.maps.length > 0) {
+            this.maps[this.currentMapIndex].update(frame)
+        }
     }
 }
 

@@ -16,6 +16,7 @@ export class Map {
     public image:MapImage = {image:undefined, layers:[]};
     private resources: ResourceLoader;
     private tileset?: Tileset;
+    public camera:{x:number,y:number} = {x:0,y:0};
     constructor(tilesetName: string, layers: number, events: events[], data: number[][][],resources: ResourceLoader) {
         this.tilesetName = tilesetName;
         this.layers = layers;
@@ -29,6 +30,16 @@ export class Map {
         for (let i = 0; i < layers; i++) {
             this.drawLayer(i);
         }
+        this.drawMap()
+    }
+
+    public update(frame: number) {
+    
+    }
+
+    public draw(context: CanvasRenderingContext2D){
+        context.drawImage(this.image.image as HTMLCanvasElement, this.camera.x, this.camera.y,canvasW, canvasH)
+        
     }
 
     private drawMap(){
@@ -45,7 +56,7 @@ export class Map {
             }
         }
         if (map) {
-            this.image.image = map.canvas;
+            this.image.image = map.canvas as HTMLCanvasElement;
         }
     }
 
@@ -64,7 +75,7 @@ export class Map {
                 
             }
             if (this.image) {
-                this.image.layers[num] = layer.canvas
+                this.image.layers[num] = layer.canvas as HTMLCanvasElement
             }
            
         }
